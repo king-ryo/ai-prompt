@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker基礎編 | アクティブラーニング</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="sidebar-left">
+            <div class="brand">
+                <i class="fa-brands fa-docker"></i> Docker Learning
+            </div>
+            <ul id="chapter-nav">
+                </ul>
+        </nav>
+
+        <main class="main-content">
+            <div id="lecture-interface">
+                <header class="content-header">
+                    <h1 id="section-title">Loading...</h1>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </header>
+
+                <div id="content-area" class="content-body">
+                    </div>
+
+                <div class="action-area">
+                    <button id="next-btn" class="btn-primary">
+                        次へ進む <i class="fa-solid fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="completion-view" class="completion-view hidden">
+                <div class="completion-content">
+                    <div class="trophy-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h1>Congratulations!</h1>
+                    <p class="completion-msg">Docker基礎編の全カリキュラムを修了しました。<br>エンジニアとしての新しい一歩を踏み出しましたね！</p>
+                    
+                    <div class="completion-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">習得スキル</span>
+                            <span class="stat-value">Docker / IaC / Nginx</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">状態</span>
+                            <span class="stat-value">Ready to Build</span>
+                        </div>
+                    </div>
+
+                    <button id="restart-btn" class="btn-primary btn-large">
+                        <i class="fa-solid fa-rotate-right"></i> トップに戻る
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+            <ul id="toc-list">
+                </ul>
+        </aside>
+    </div>
+
+    <div id="slide-modal" class="modal hidden">
+        <div class="modal-content slide-modal-content">
+            <div class="modal-header">
+                <h2>まとめスライド</h2>
+                <button id="close-slide-modal" class="btn-icon"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body slide-body">
+                <iframe id="slide-frame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="keyword-modal" class="modal hidden">
+        <div class="modal-content keyword-modal-content">
+            <div class="modal-header">
+                <h2 id="keyword-title">用語解説</h2>
+                <button id="close-keyword-modal" class="btn-icon"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body keyword-body">
+                <p id="keyword-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
